@@ -1,0 +1,3 @@
+This is stuff I like to write.
+Comes out when called up by a python script.
+A'ight!
