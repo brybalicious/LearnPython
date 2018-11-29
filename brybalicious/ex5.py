@@ -23,7 +23,7 @@ print "His teeth are usually %s depending on the coffee." % teeth
 # Note there are different format characters in python => %s, %d...
 # https://docs.python.org/2.4/lib/typesseq-strings.html
 # there's also a %r which is very useful.
-#http://stackoverflow.com/questions/6005159/when-to-use-r-instead-of-s-in-python
+# http://stackoverflow.com/questions/6005159/when-to-use-r-instead-of-s-in-python
 # The %s specifier converts the object using str(), and %r converts it using repr().
 # For some objects such as integers, they yield the same result, but repr() is special in that (for types where this is possible) it conventionally returns a result that is valid Python syntax, which could be used to unambiguously recreate the object it represents.
 # Here's an example, using a date:
@@ -40,5 +40,6 @@ print "His teeth are usually %s depending on the coffee." % teeth
 print "If I add %d, %d, and %d I get %d." % (age, height * intocm, weight * lbtokg, age + height*intocm + weight*lbtokg)
 # interesting - you can specify variables in parentheses, but also perform operations on them there...
 # Also if you use %r for the last substitution in this print(), you realise that the math is being done in float. Useful for debugging.
+# print "If I add %d, %r, and %r I get %r." % (age, height * intocm, weight * lbtokg, age + height*intocm + weight*lbtokg)
 
 #Last bug - what do we have to do to make the math work out? Something to do with rounding or flooring floats. Now, what to do? Interestingly, the %d is doing some function on the math at the point where the calculated number is being substituted in. Is this .floor()?
